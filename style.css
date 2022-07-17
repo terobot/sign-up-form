@@ -1,14 +1,27 @@
+html {
+    height: 100%;
+    margin: 0;
+} 
 
 body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    min-height: 100%;
+    width: 100vw;
     margin: 0;
     padding: 0;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 .page {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 100%;
+    min-height: 100vh;
 }
 
 .sidePanel {
@@ -21,7 +34,7 @@ body {
     background-image: url("smoke-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100%;
     color: whitesmoke;
 }
 
@@ -29,11 +42,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     background-color: rgba(255, 255, 255, 0.1);
-    font-size: 40px;
+    font-size: 2em;
     font-weight: bold;
-    width: 30vw;
-    margin-top: 20vh;
+    width: 100%;
+    margin-top: 9vh;
+    padding: 4vh;
+}
+
+.contribution {
+    font-size: small;
+    margin-bottom: 0.25em;
+    text-align: center;
 }
 
 .contribution a {
@@ -50,13 +71,81 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 4vw;
+    min-height: 100%;
 }
 
 .text {
     font-size: medium;
     font-weight: bolder;
-    margin-right: 8vw;
+    padding-left: 2em;
+    padding-right: 6em;
+}
+
+.form form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4em;
+    row-gap: 1em;
+    background-color: ghostwhite;
+    box-shadow: 4px 4px 1px 1px rgba(0, 0, 255, .2);
+    width: fit-content;
+    border: none;
+    margin-bottom: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+    padding-block-start: 0px;
+    padding-block-end: 0px;
+    padding-left: 2em;
+    padding-bottom: 1em;
+}
+
+.form form fieldset legend {
+    font-size: medium;
+    font-weight: bolder;
+    float: left;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.form form fieldset div {
+    display: flex;
+    font-size: xx-small;
+    font-weight: 600;
+    letter-spacing: .2em;
+    flex-wrap: wrap;
+    width: min-content;
+}
+
+.form form button {
+    margin-left: 2em;
+    box-shadow: 0px 10px 14px -7px #276873;
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+
+.form form button:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.form form button:active {
+	position:relative;
+	top:1px;
+}
+
+
+.sign-in {
+    padding-left: 2em;
 }
 
 .sign-in a {

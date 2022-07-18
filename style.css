@@ -31,11 +31,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url("smoke-bg.jpg");
+    background-image: url("game-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
-    color: whitesmoke;
+    color: white;
 }
 
 .logo {
@@ -43,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 42, 0, 0.1);
     font-size: 2em;
     font-weight: bold;
     width: 100%;
@@ -55,10 +55,11 @@ body {
     font-size: small;
     margin-bottom: 0.25em;
     text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .contribution a {
-    color: whitesmoke;
+    color: white;
 }
 
 a:hover {
@@ -72,6 +73,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     min-height: 100%;
+    background-color: #F9FAFB;
 }
 
 .text {
@@ -86,8 +88,8 @@ a:hover {
     flex-wrap: wrap;
     column-gap: 4em;
     row-gap: 1em;
-    background-color: ghostwhite;
-    box-shadow: 4px 4px 1px 1px rgba(0, 0, 255, .2);
+    background-color: white;
+    box-shadow: 2px 2px 1px 1px #E4E5E6;
     width: fit-content;
     border: none;
     margin-bottom: 1em;

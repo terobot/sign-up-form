@@ -30,35 +30,39 @@
           <p>You <em>know</em> you want to.</p>
         </div>
         <div class="form">
-          <form action="" method="post">
+          <form action='' id="form">
             <fieldset>
               <legend>Let's do this!</legend>
               <div>
                 <label for="firstName">FIRTS NAME</label>
-                <input type="text" name="firstName" id="firstName">
+                <input type="text" name="firstName" id="firstName" required>
               </div>
               <div>
                 <label for="lastName">LAST NAME</label>
-                <input type="text" name="lastName" id="lastName">
+                <input type="text" name="lastName" id="lastName" required>
               </div>
               <div>
                 <label for="userEmail">EMAIL</label>
-                <input type="email" id="userEmail" name="email" placeholder="you@mail.com">
+                <input type="email" id="userEmail" name="email" placeholder="you@mail.com" required>
               </div>
               <div>
                 <label for="phoneNumber">PHONE NUMBER</label>
-                <input type="text"  id="phoneNumber" name="phoneNumber">
+                <input type="tel"  id="phoneNumber" name="phoneNumber" placeholder="+123456789" pattern="\+[0-9]{1,6}[0-9]{6,9}" required>
               </div>
               <div>
                 <label for="userPassword">PASSWORD</label>
-                <input type="password" id="userPassword" name="password">
+                <input type="password" id="userPassword" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
               </div>
               <div>
                 <label for="confirmPassword">CONFIRM PASSWORD</label>
-                <input type="password" id="confirmPassword" name="password">
+                <input type="password" id="confirmPassword" name="password" required>
+              </div>
+              <div class="errorMessage" id="errorMessage">
+                <div class="passwordRequirements" id="passwordRequirements">Your password must be at least 8 characters as well as contain at least one uppercase, one lowercase, and one number.</div>
+                <div class="errorPassword" id="errorPassword">Passwords do not match</div>
               </div>
             </fieldset>
-            <button type="submit">Create account</button>
+            <button type="submit" id="submit">Create account</button>
           </form>
         </div>
         <div class="sign-in">
@@ -66,5 +70,6 @@
         </div>
       </div>
     </div>
+    <script defer src='./main.js'></script>
   </body>
 </html>

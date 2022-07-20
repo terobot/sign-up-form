@@ -49,21 +49,23 @@ body {
     width: 100%;
     margin-top: 9vh;
     padding: 4vh;
+    user-select: none;
 }
 
 .contribution {
     font-size: small;
     margin-bottom: 0.25em;
     text-align: center;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
 }
 
 .contribution a {
     color: white;
 }
 
-a:hover {
+.contribution a:hover {
     color: hotpink;
+    font-weight: bold;
 }
 
 .mainPanel {
@@ -120,8 +122,34 @@ a:hover {
     width: min-content;
 }
 
+input:focus::placeholder {
+    color: transparent;
+}
+
+.error {
+    border: 2px solid hotpink; 
+}
+
+.errorMessage {
+    margin-top: -1em;
+}
+  
+div#errorPassword {
+    display: none;
+    color:hotpink;
+    width: 60vw;
+}
+
+div#passwordRequirements {
+    display: none;
+    color: hotpink;
+    width: 60vw;
+    margin-bottom: 1em;
+}
+
 .form form button {
     margin-left: 2em;
+    margin-top: 1em;
     box-shadow: 0px 10px 14px -7px #276873;
 	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
 	background-color:#599bb3;
@@ -134,6 +162,8 @@ a:hover {
 	padding:13px 32px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #3d768a;
+
+    user-select: none;
 }
 
 .form form button:hover {
@@ -145,8 +175,8 @@ a:hover {
 	top:1px;
 }
 
-
 .sign-in {
+    margin-top: .5em;
     padding-left: 2em;
 }
 
@@ -156,4 +186,5 @@ a:hover {
 
 .sign-in a:hover {
     color: hotpink;
+    font-weight: bold;
 }
